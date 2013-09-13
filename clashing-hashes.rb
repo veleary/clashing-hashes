@@ -1,7 +1,8 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'sinatra'
+require 'sinatra/reloader'
 
-get '/hi' do
+get '/' do
   'hello world'
 end
