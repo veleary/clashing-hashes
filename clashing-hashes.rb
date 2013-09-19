@@ -24,9 +24,11 @@ post '/twitter'  do
 # @second = t.author
 # @tweets[@second] = [@status]
 
-@user1 = params["login-a"]
-@user2 = params["login-b"]
-@result = FollowerClash::Comparer.new(@user1, @user2)
+@login-a = params["login-a"]
+@login-b = params["login-b"]
+@userA = FollowerClash::User.new(@login-a)
+@userB = FollowerClash::User.new(@login-b)
+@result = FollowerClash::Comparer.new(userA, userB)
 
  # @tweets = Twitter::Tweet.give_me_tweets(20)
 
