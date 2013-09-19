@@ -14,11 +14,15 @@ end
 
 
 post '/twitter'  do 
-t = Twitter::Tweet.new(@post,@name)  
- @tweets = [t]
-@name = params[:fname]
- @post = params[:post]    
- @tweets = Twitter::Tweet.give_me_tweets(20)
+@author = params[:fname]
+@status = params[:post] 
+@tweets = {}
+t = Twitter::Tweet.new(@status,@author) 
+@first = t.status
+@second = t.author
+@tweets[@second] = [@status]
+
+ # @tweets = Twitter::Tweet.give_me_tweets(20)
 
  
  # return "#{name} : #{post}"

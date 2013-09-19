@@ -1,10 +1,6 @@
-<h3>Name</h3>
-<p><%=@fname%></p>
 
-<h3>Post</h3>
-<p><%=@post%></p>
 
-<% @tweets.each do |tweet| %>
-<h3>Author: <%=@author.author%></h3>
-<p> Status: <%=@status.status%></p>
+<% @tweets.each do |first, second|%>
+<h3>Author: <%=@author%></h3>
+<p> Status: <%=@status%></p>
 <%end%>
