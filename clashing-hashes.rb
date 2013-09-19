@@ -15,6 +15,7 @@ end
 
 
 post '/twitter'  do 
+   erb :twitter_results
 # @author = params[:fname]
 # @status = params[:post] 
 # @tweets = {}
@@ -31,7 +32,7 @@ post '/twitter'  do
 
  
  # return "#{name} : #{post}"
- erb :twitter_results
+
 end
 
 
