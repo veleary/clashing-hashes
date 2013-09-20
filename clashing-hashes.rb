@@ -12,14 +12,9 @@ end
 
 
 post '/twitter'  do  
-
-<<<<<<< HEAD
-@user1 = params[:user1_login]
-@user2 = params[:user2_login]
->>>>>>> userview
-user1= FollowerClash::User.new(@user1)
-user2 = FollowerClash::User.new(@user2)
-@result = FollowerClash::Comparer.new(user1, user2)
+@user1= FollowerClash::User.new(params[:user1_login])
+@user2 = FollowerClash::User.new(params[:user2_login])
+@result = FollowerClash::Comparer.new(@user1, @user2).compare
 erb :twitter_results
 
 end
