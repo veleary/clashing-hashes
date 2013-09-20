@@ -18,8 +18,8 @@ post '/twitter'  do
 user1= FollowerClash::User.new(@user1)
 user2 = FollowerClash::User.new(@user2)
 @result = FollowerClash::Comparer.new(user1, user2)
-
 erb :twitter_results
+
 end
 
 

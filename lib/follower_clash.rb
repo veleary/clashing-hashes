@@ -25,6 +25,7 @@ module FollowerClash
     def initialize(user1,user2)
       @user1 = user1
       @user2 = user2
+      @result = result
       if (@user1.followers > @user2.followers)
         '#{user1.login} has more followers'
       elsif (@user1.followers < @user2.followers)
