@@ -4,13 +4,12 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'twitter'
 
-require_relative 'lib/twitter'
 require_relative 'lib/follower_clash'
 
 include Twitter
 
 get '/'  do
-  erb :check
+  erb :index
 end
 
 

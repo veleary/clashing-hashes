@@ -1,4 +1,10 @@
-<h1> <%= @name %></h1>
-<% if @show_description %>
- <p>This is my description</p>
- <% end %>
+
+<link rel="stylesheet" type="text/css" href="application.css">
+
+<h1>Please Fill out your Login Information</h1>
+
+<form action="/twitter" method="POST">
+Please Login: <input type="text" login-a="user1-login"><br>
+Please Login: <input type="text" login-b="user2-login">
+<input type="submit">
+</form>
