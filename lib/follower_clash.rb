@@ -29,9 +29,9 @@ module FollowerClash
 
     def compare       
       if @user1.followers > @user2.followers
-         '#{user1.login} has more followers'
+         @user1.login + 'has more followers'
       elsif @user1.followers < @user2.followers
-        '#{user2.login} has more followers'
+        @user2.login + 'has more followers'
       else
         "It's a tie!"
       end
