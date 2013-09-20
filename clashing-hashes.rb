@@ -12,11 +12,10 @@ end
 
 
 post '/twitter'  do  
-@user1= FollowerClash::User.new(params[:user1_login])
-@user2 = FollowerClash::User.new(params[:user2_login])
-@result = FollowerClash::Comparer.new(@user1, @user2).compare
-erb :twitter_results
-
+  @user1= FollowerClash::User.new(params[:user1_login])
+  @user2 = FollowerClash::User.new(params[:user2_login])
+  @result = FollowerClash::Comparer.new(@user1, @user2).compare
+  erb :twitter_results
 end
 
 
