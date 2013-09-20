@@ -15,8 +15,8 @@ end
 
 post '/twitter'  do  
 
-@user1 = params["login-a"]
-@user2 = params["login-b"]
+@user1 = params[:login_a]
+@user2 = params[:login_b]
 user1= FollowerClash::User.new(@user1)
 user2 = FollowerClash::User.new(@user2)
 @result = FollowerClash::Comparer.new(userA, userB)

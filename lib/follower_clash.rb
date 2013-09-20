@@ -31,7 +31,7 @@ module FollowerClash
       elsif (@user1.followers < @user2.followers)
         '#{user2.login} has more followers'
       else
-        'It's a tie!'
+        "It's a tie!"
       end
     end
   end
