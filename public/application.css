@@ -1,7 +1,27 @@
 body {
-	background-color: black;
+	background-color:#82CFFD;
+}
+
+h1 {
+	background-color: #82CFFD;
+	text-align: center;
+	font-family: 'Kavoon', cursive;
+}
+
+h3 {
+	background-color: #82CFFD;
+	text-align: center;
+	font-family: 'Kavoon', cursive;
+
+}
+
+form {
+	color: black;
+	float: left;
+	font-family: 'Happy Monkey', cursive;
 }
 
 p {
-	color: white;
+	color: #82CFFD;
+	font-family: 'Happy Monkey', cursive;
 }
