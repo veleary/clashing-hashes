@@ -6,8 +6,6 @@ require 'twitter'
 
 require_relative 'lib/follower_clash.rb'
 
-include Twitter
-
 get '/'  do
   erb :index
 end
@@ -15,13 +13,15 @@ end
 
 post '/twitter'  do  
 
-@user1 = params[:login_a]
-@user2 = params[:login_b]
+<<<<<<< HEAD
+@user1 = params[:user1_login]
+@user2 = params[:user2_login]
+>>>>>>> userview
 user1= FollowerClash::User.new(@user1)
 user2 = FollowerClash::User.new(@user2)
-@result = FollowerClash::Comparer.new(userA, userB)
-
+@result = FollowerClash::Comparer.new(user1, user2)
 erb :twitter_results
+
 end
 
 

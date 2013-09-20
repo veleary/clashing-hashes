@@ -1,19 +1,16 @@
-<!doctype html>
-<html>
-<head>
-<link rel="stylesheet" href="application.css" type="text/css" />
+
+
+<link rel="stylesheet" type="text/css" href="public/application.css"  />
 <h1>Fill this out!</h1>
-</head>
 
-<body>
-<div class="form">
-<form  name="input" action="/twitter" method="post">
 
-User 1: <input type="text" user1="login-a"><br>
-User 2: <input type="text" user2="login-b"><br>
+
+<form action="/twitter" method="POST">
+<p>User 1:</p><input type="text" name="user1_login">
+<br/>
+<p>User 2:</p><input type="text" name="user2_login">
+<br/>
 	<input type="submit" value="submit">
-
 </form>
-</div>
-</body>
-</html>
+
+

@@ -15,10 +15,9 @@ module FollowerClash
         config.consumer_key = ENV['CONSUMER_KEY']
         config.consumer_secret = ENV['CONSUMER_SECRET']
         config.oauth_token = ENV['OAUTH_TOKEN']
-        config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']        
-    end
-
-    client.user(@login).followers_count
+        config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']   
+      end  
+     client.user(@login).followers_count
     end
   end
 
@@ -26,6 +25,7 @@ module FollowerClash
     def initialize(user1,user2)
       @user1 = user1
       @user2 = user2
+      @result = result
       if (@user1.followers > @user2.followers)
         '#{user1.login} has more followers'
       elsif (@user1.followers < @user2.followers)

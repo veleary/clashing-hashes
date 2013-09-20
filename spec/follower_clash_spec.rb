@@ -1,3 +1,7 @@
+require 'rubygems'
+require 'bundler'
+require 'rspec'
+
 require_relative '../lib/follower_clash.rb'
 
 describe FollowerClash::Comparer do
@@ -14,8 +18,8 @@ describe FollowerClash::Comparer do
       end
     end
 
-    context 'when user 1 and user 2 have the same number of followers'
-      it 'should return both users have the same number of followers'
+    context 'when user 1 and user 2 have the same number of followers' do
+      it 'should return both users have the same number of followers' do
         user1 = double("user1")
         user2 = double("user2")
 
@@ -25,6 +29,7 @@ describe FollowerClash::Comparer do
         expect(FollowerClash::Comparer.new(user1,user2).compare).to eq("Both users have the same number of followers")
       end
     end
+  end
 
  describe FollowerClash::User do
     describe '#followers' do
