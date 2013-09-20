@@ -26,12 +26,15 @@ module FollowerClash
       @user1 = user1
       @user2 = user2
       @result = result
+    end
+
+    def compare       
       if (@user1.followers > @user2.followers)
-        '#{user1.login} has more followers'
+        @result = '#{user1.login} has more followers'
       elsif (@user1.followers < @user2.followers)
-        '#{user2.login} has more followers'
+        @result = '#{user2.login} has more followers'
       else
-        "It's a tie!"
+        @result = "It's a tie!"
       end
     end
   end
