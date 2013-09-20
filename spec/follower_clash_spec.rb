@@ -10,7 +10,7 @@ describe FollowerClash::Comparer do
         allow(user1).to receive(:followers).and_return(10)
         allow(user2).to receive(:followers).and_return(1)
 
-        expect(FollowerClash::Comparer.new(user1, user2).compare).to eq(user1)
+        expect(FollowerClash::Comparer.new(user1, user2).compare).to eq(user1.login)
       end
     end
 

@@ -14,27 +14,15 @@ get '/'  do
 end
 
 
-post '/twitter'  do 
-   erb :twitter_results
-# @author = params[:fname]
-# @status = params[:post] 
-# @tweets = {}
-# t = Twitter::Tweet.new(@status,@author) 
-# @first = t.status
-# @second = t.author
-# @tweets[@second] = [@status]
+post '/twitter'  do  
 
-@login-a = params["login-a"]
-@login-b = params["login-b"]
-@userA = FollowerClash::User.new(@login-a)
-@userB = FollowerClash::User.new(@login-b)
+@user1 = params["login-a"]
+@user2 = params["login-b"]
+user1= FollowerClash::User.new(@user1)
+user2 = FollowerClash::User.new(@user2)
 @result = FollowerClash::Comparer.new(userA, userB)
 
- # @tweets = Twitter::Tweet.give_me_tweets(20)
-
- 
- # return "#{name} : #{post}"
-
+erb :twitter_results
 end
 
 
