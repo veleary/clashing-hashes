@@ -10,7 +10,7 @@ require_relative 'lib/follower_clash'
 include Twitter
 
 get '/'  do
-  erb :index
+  erb :check
 end
 
 
