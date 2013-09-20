@@ -25,6 +25,7 @@ describe FollowerClash::Comparer do
         expect(FollowerClash::Comparer.new(user1,user2).compare).to eq("Both users have the same number of followers")
       end
     end
+  end
 
  describe FollowerClash::User do
     describe '#followers' do
