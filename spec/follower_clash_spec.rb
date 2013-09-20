@@ -1,4 +1,4 @@
-require_relative '../lib/follower_clash'
+require_relative '../lib/follower_clash.rb'
 
 describe FollowerClash::Comparer do
   describe '#compare' do

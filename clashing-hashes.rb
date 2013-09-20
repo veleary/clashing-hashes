@@ -4,7 +4,7 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'twitter'
 
-require_relative 'lib/follower_clash'
+require_relative 'lib/follower_clash.rb'
 
 include Twitter
 
